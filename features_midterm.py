@@ -144,7 +144,7 @@ full_data["neutral_extreme_low_day"] = np.where((full_data["IB_BK"] == 1) &
  (full_data["close_day"] < full_data["IBL_day"]) ,1,0)
 
 
-full_data.to_csv("D:/MarketProfileData/out/midterm_data.csv", index = False)
+full_data.to_csv("midterm_data.csv", index = False)
 
 print("Prepare minute data")
 import Incremental_MP_Minute_data
