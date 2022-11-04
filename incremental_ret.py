@@ -181,7 +181,7 @@ if dest.index[-1] >= df.index[0]:
 
     #dest["Normal_Day"] = np.where((dest["IBH_BK"] == 0) & (dest["IBL_BK"] == 0))
 
-    dest.to_csv("D:/MarketProfileData/out/NQ_market_profile_master_vol_close.csv")
+    dest.to_csv("NQ_market_profile_master_vol_close.csv")
 
 
 else:
