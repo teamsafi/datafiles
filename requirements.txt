@@ -1,5 +1,4 @@
-pandas
-datetime
-requests
-numpy
+pandas==1.5.1
+requests==2.28.1
+numpy==1.23.4
 statistics
