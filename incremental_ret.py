@@ -65,7 +65,7 @@ source_data = "IBKR"
 
 #####################################################
 
-dest = pd.read_csv("D:/MarketProfileData/out/NQ_market_profile_master_vol_close.csv", index_col="Unnamed: 0")
+dest = pd.read_csv("NQ_market_profile_master_vol_close.csv", index_col="Unnamed: 0")
 previous_day = dest.index[-2]
 dest.index = pd.to_datetime(dest.index)
 
