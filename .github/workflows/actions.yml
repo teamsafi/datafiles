@@ -2,7 +2,7 @@ name: features_midterm.py
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5'  # At 14:00 on every day-of-week from Monday through Friday.
+    - cron: '20 14 * * 1-5'  # At 14:00 on every day-of-week from Monday through Friday.
 
 jobs:
   build:
