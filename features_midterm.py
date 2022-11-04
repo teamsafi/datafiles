@@ -26,7 +26,7 @@ import incremental_ret
 print("Features mideterm in progress")
 from MP_analysis import MP_Timeframes, range_open, poc_night, A_higher_B, A_lower_B, width_poc_night, MP_filter, MP_match_filters, map_MP_binary
 
-path = "D:/MarketProfileData/out/NQ_market_profile_master_vol_close.csv"
+path = "NQ_market_profile_master_vol_close.csv"
 
 raw_data = pd.read_csv(path)
 df = raw_data.rename(columns={'Unnamed: 0': 'Date'})
