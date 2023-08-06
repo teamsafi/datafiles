@@ -328,7 +328,8 @@ def adjustments(df):
     day_sessions_1 = day_sessions[day_sessions.index.time != datetime.time(6, 45)]
     day_sessions_2 = day_sessions[day_sessions.index.time == datetime.time(6, 45)]
     day_sessions_1 = day_sessions_1.resample("30Min").apply(ohlc_dict)
-    day_sessions = day_sessions_1.append(day_sessions_2)
+    #day_sessions = day_sessions_1.append(day_sessions_2)
+    day_sessions = pd.concat([day_sessions_1, day_sessions_2])
     day_ohlc = day_sessions_1.resample("1440Min").apply(ohlc_dict).dropna()
     # day_sessions = day_sessions.append(rest_sessions)
     day_sessions.sort_index(inplace=True)
@@ -338,10 +339,12 @@ def adjustments(df):
         .apply(ohlc_dict)
         .dropna()
     )
-    night_sessions = night_sessions.append(rest_sessions)
+    #night_sessions = night_sessions.append(rest_sessions)
+    night_sessions = pd.concat([night_sessions, rest_sessions])
     night_sessions.sort_index(inplace=True)
     night_ohlc = night_sessions.resample("1440Min").apply(ohlc_dict).dropna()
-    df2 = day_sessions.append(night_sessions)
+    #df2 = day_sessions.append(night_sessions)
+    df2 = pd.concat([day_sessions, night_sessions])
     df2.sort_index(inplace=True)
     df2.dropna(inplace=True)
     # df_mini = df2[str(df2.index.date[49])]

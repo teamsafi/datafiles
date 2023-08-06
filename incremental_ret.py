@@ -117,7 +117,8 @@ if dest.index[-1] >= df.index[0]:
     df = adjustments(df)
 
     print(df)
-    dest = dest.append(df)
+    #dest = dest.append(df)
+    dest = pd.concat([dest, df])
     dest.drop_duplicates(inplace=True)
     dest = dest[~dest.index.duplicated(keep="last")]
     dest.sort_index(inplace=True)
