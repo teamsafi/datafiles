@@ -7,7 +7,7 @@ This repository contains the data files for the midterm_data project.
 The clena mechanism of corrupted data is to run the following command:
 
 ```bash
-python3 clean.py
+python3 clean_data.py
 ```
 
 This will reset the midterm_data.csv file to the original state.
