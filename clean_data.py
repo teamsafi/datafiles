@@ -1,7 +1,7 @@
 import pandas as pd
 
 midterm = pd.read_csv('midterm_data.csv')
-midterm = midterm.drop(midterm.tail(250).index)
+midterm = midterm.drop(midterm.tail(100).index)
 print('Midterm data')
 print(midterm.tail(1))
 midterm.to_csv('midterm_data.csv', index=False)
